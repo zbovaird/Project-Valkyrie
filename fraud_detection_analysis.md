@@ -4,7 +4,13 @@
 The financial industry, particularly credit card issuers, heavily prioritizes AI for fraud detection (81% enthusiasm rate, 62% expected implementation). This creates a dual challenge:
 1. Technical effectiveness in pattern detection
 2. Regulatory compliance and explainability
+
+ Issuers see combating fraud as the most important application for AI. Among the 27 European issuers we surveyed, 22 of them (81%) were very or somewhat enthusiastic about AI’s impact on their business in the future, matching closely with other regions. Among all issuers, 62% said they expect AI to be used for fraud detection, more than any other area. (Customer service came next, at 54%, followed by sales forecasting, at 48%).
+
+Our conversations with issuers reveal that AI generates its own concerns. In theory, AI and machine learning have the potential to analyze large amounts of data to detect anomalies and identify patterns. But in practice, issuers need to be wary of how they construct their anti-fraud models. For example, the Financial Conduct Authority requires firms to treat customers fairly and communicate with them clearly, so issuers should be transparent in how they apply AI. The rules they construct should be documented and rationalized in order to meet regulatory requirements, issuers note. If an issuer says a transaction is fraudulent, they should be able to say why.
 *Source: https://www.tsys.com/insights/2024/02/20/amidst-a-payment-revolution-issuers-cite-security-as-the-highest-priority
+
+## Build a GNN for Fraud Detection using GraphSAGE, supported by Splunk SOAR, optimized with uhg library
 
 ## GNN Requirements Analysis
 
