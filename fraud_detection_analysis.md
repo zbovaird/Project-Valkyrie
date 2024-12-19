@@ -521,3 +521,18 @@ class SplunkSOARInterface:
 - Follows Splunk event format
 - Compatible with Splunk SOAR playbooks
 - Maintains Splunk search compatibility
+
+**Why This Belongs in SOAR:**
+- Fraud is a security threat that involves:
+    Phishing, Account Takeover, other cyber attacks
+- Shared IOCs: IP addresses, email addresses, behavioral anomalies, geolocation anomalies (don't use Splunk _iplocation)
+- Automated response:
+    - Block transaction
+    - Flag accounts
+    - Notify security team
+- Investigation
+    - creates event
+    - Artifact investigation
+    - Data enrichment
+    - trigger playbooks
+    - 
