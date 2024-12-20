@@ -159,33 +159,6 @@ Unlike fraud detection, insider threat detection benefits significantly from hyp
 - Escalation Accuracy
 - Pattern Recognition Rate
 
-## Technical Integration
-
-```python
-class UHGInsiderThreatModel(nn.Module):
-    def __init__(self, in_channels, hidden_channels, out_channels):
-        super().__init__()
-        self.uhg = ProjectiveUHG()
-        
-        # Privilege path
-        self.priv_conv = UHGSAGEConv(in_channels, hidden_channels)
-        self.priv_path = nn.ModuleList([
-            UHGSAGEConv(hidden_channels, hidden_channels)
-            for _ in range(2)
-        ])
-        
-        # Asset path
-        self.asset_conv = UHGSAGEConv(in_channels, hidden_channels)
-        self.asset_path = nn.ModuleList([
-            UHGSAGEConv(hidden_channels, hidden_channels)
-            for _ in range(2)
-        ])
-        
-        # Combined analysis
-        self.combine = UHGSAGEConv(hidden_channels * 2, out_channels)
-```
-
-
 
 ## Why SOAR Should Own Insider Threat Detection
 
