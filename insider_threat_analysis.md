@@ -185,28 +185,81 @@ class UHGInsiderThreatModel(nn.Module):
         self.combine = UHGSAGEConv(hidden_channels * 2, out_channels)
 ```
 
-## SOAR Integration Points
 
-```python
-class SOARIntegration:
-    def process_alert(self, alert_data):
-        """Process insider threat alerts in SOAR"""
-        return {
-            'severity': self.calculate_severity(),
-            'risk_factors': self.identify_risk_factors(),
-            'automated_actions': self.determine_actions(),
-            'investigation_requirements': self.get_investigation_needs(),
-            'evidence_collection': self.collect_evidence(),
-            'playbook_triggers': self.get_playbook_triggers()
-        }
-    
-    def calculate_severity(self):
-        """Calculate alert severity based on multiple factors"""
-        factors = {
-            'privilege_level': self.assess_privilege_level(),
-            'asset_sensitivity': self.assess_asset_sensitivity(),
-            'escalation_speed': self.assess_escalation_speed(),
-            'historical_pattern': self.check_historical_patterns()
-        }
-        return self.compute_severity_score(factors)
-```
+
+## Why SOAR Should Own Insider Threat Detection
+
+### Operational Requirements
+- **Unified Response Platform**
+    * Single source of truth for alerts
+    * Centralized response coordination
+    * Integrated investigation workflow
+    * Automated evidence collection
+
+- **Cross-Tool Orchestration**
+    * EDR/XDR integration required
+    * Active Directory monitoring needed
+    * UBA data integration critical
+
+- **Speed of Response**
+    * Milliseconds matter in privilege escalation
+    * Immediate action capability needed
+    * Real-time response orchestration
+    * Automated containment required
+
+### Technical Advantages
+- **Data Access**
+    * Already ingests security tool logs
+    * Has Active Directory integration
+    * Monitors authentication events
+    * Tracks user behavior
+
+- **Existing Infrastructure**
+    * Built-in automation capabilities
+    * Established playbook framework
+    * Existing tool integrations
+    * Scalable processing pipeline
+
+- **Investigation Capabilities**
+    * Native case management
+    * Built-in evidence collection
+    * Automated timeline creation
+    * Correlation capabilities
+
+### Business Benefits
+- **Cost Efficiency**
+    * Leverages existing investment
+    * Reduces tool sprawl
+    * Minimizes integration costs
+    * Optimizes analyst workflow
+
+- **Risk Reduction**
+    * Faster incident response
+    * More consistent actions
+    * Better documentation
+    * Improved compliance
+
+- **Operational Efficiency**
+    * Streamlined workflows
+    * Automated routine tasks
+    * Enhanced collaboration
+
+### Security Advantages
+- **Comprehensive Coverage**
+    * Monitors all critical systems
+    * Tracks privileged access
+    * Observes data movement
+    * Detects lateral movement
+
+- **Immediate Response**
+    * Instant privilege revocation
+    * Automated session termination
+    * Rapid asset isolation
+    * Quick evidence preservation
+
+- **Investigation Support**
+    * Automated evidence gathering
+    * Standardized workflows
+    * Consistent documentation
+    * Pattern analysis
+
